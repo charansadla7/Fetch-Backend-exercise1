@@ -34,7 +34,7 @@ Access the API locally at http://127.0.0.1:5000.
 - **Response**: JSON object with a unique ID for the receipt
 
 ### Example Request:
-
+```json
 {
   "retailer": "Target",
   "purchaseDate": "2022-01-01",
