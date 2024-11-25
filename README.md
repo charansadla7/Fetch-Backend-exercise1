@@ -63,6 +63,7 @@ Access the API locally at http://127.0.0.1:5000.
   ],
   "total": "35.35"
 }
+}
 ## 2. Retrieve Points
 
 - **Endpoint**: `/receipts/<receipt_id>/points`
