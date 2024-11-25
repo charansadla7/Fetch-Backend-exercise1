@@ -29,12 +29,12 @@ Access the API locally at http://127.0.0.1:5000.
 
 ## API Endpoints
 
-## 1. Process Receipts
-## Endpoint: /receipts/process
-## Method: POST
-## Payload: JSON object containing receipt data
-## Response: JSON object with a unique ID for the receipt
-## Example Request:
+### 1. Process Receipts
+### Endpoint: /receipts/process
+### Method: POST
+### Payload: JSON object containing receipt data
+### Response: JSON object with a unique ID for the receipt
+### Example Request:
 
 {
   "retailer": "Target",
@@ -69,11 +69,11 @@ Access the API locally at http://127.0.0.1:5000.
 {
   "id": "7fb1377b-b223-49d9-a31a-5a02701dd310"
 }
-## 2. Retrieve Points
-## Endpoint: /receipts/<receipt_id>/points
-## Method: GET
-## Response: JSON object with the points for the receipt
-## Example Response:
+### 2. Retrieve Points
+### Endpoint: /receipts/<receipt_id>/points
+### Method: GET
+### Response: JSON object with the points for the receipt
+### Example Response:
 
 {
   "points": 32
