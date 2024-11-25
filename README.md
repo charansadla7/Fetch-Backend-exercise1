@@ -78,15 +78,16 @@ Access the API locally at http://127.0.0.1:5000.
 {
   "points": 32
 }
-# Points Calculation Rules
+## Points Calculation Rules
 
-Retailer Name: 1 point for each alphanumeric character.
-Round Dollar Amount: 50 points if the total is a whole number.
-Multiple of $0.25: 25 points if the total is a multiple of $0.25.
-Item Pairs: 5 points for every 2 items on the receipt.
-Item Description Length: If the trimmed length of an item description is a multiple of 3, multiply the item price by 0.2, round up, and add the result to the points.
-Odd Purchase Day: 6 points if the purchase date is an odd day.
-Afternoon Purchase Time: 10 points if the time of purchase is between 2:00 PM and 4:00 PM.
+- **Retailer Name**: 1 point for each alphanumeric character.
+- **Round Dollar Amount**: 50 points if the total is a whole number.
+- **Multiple of $0.25**: 25 points if the total is a multiple of $0.25.
+- **Item Pairs**: 5 points for every 2 items on the receipt.
+- **Item Description Length**: If the trimmed length of an item description is a multiple of 3, multiply the item price by 0.2, round up, and add the result to the points.
+- **Odd Purchase Day**: 6 points if the purchase date is an odd day.
+- **Afternoon Purchase Time**: 10 points if the time of purchase is between 2:00 PM and 4:00 PM.
+
 ## Example 1
 
 ## Input:
