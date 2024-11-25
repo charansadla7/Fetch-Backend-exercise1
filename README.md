@@ -27,7 +27,7 @@ Run the Application
 python app.py
 Access the API locally at http://127.0.0.1:5000.
 
-## API Endpoints
+# API Endpoints
 
 ### 1. Process Receipts
 ### Endpoint: /receipts/process
@@ -69,7 +69,7 @@ Access the API locally at http://127.0.0.1:5000.
 {
   "id": "7fb1377b-b223-49d9-a31a-5a02701dd310"
 }
-### 2. Retrieve Points
+# 2. Retrieve Points
 ### Endpoint: /receipts/<receipt_id>/points
 ### Method: GET
 ### Response: JSON object with the points for the receipt
@@ -78,7 +78,7 @@ Access the API locally at http://127.0.0.1:5000.
 {
   "points": 32
 }
-## Points Calculation Rules
+# Points Calculation Rules
 
 Retailer Name: 1 point for each alphanumeric character.
 Round Dollar Amount: 50 points if the total is a whole number.
