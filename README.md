@@ -7,7 +7,6 @@ This project implements a web service that processes receipts, calculates points
 
 1. **Process Receipts**: Accepts receipt data in JSON format and returns a unique ID for the receipt.
 2. **Retrieve Points**: Provides the points calculated for a specific receipt using its unique ID.
-
 ## Prerequisites
 - Python 3.8 or above
 - `pip` (Python package installer)
@@ -27,60 +26,7 @@ Run the Application
 python app.py
 Access the API locally at http://127.0.0.1:5000.
 
-# API Endpoints
 
-## 1. Process Receipts
-- **Endpoint**: `/receipts/process`
-- **Method**: POST
-- **Payload**: JSON object containing receipt data
-- **Response**: JSON object with a unique ID for the receipt
-
-### Example Request:
-
-```json
-{
-  "retailer": "Target",
-  "purchaseDate": "2022-01-01",
-  "purchaseTime": "13:01",
-  "items": [
-    {
-      "shortDescription": "Mountain Dew 12PK",
-      "price": "6.49"
-    },
-    {
-      "shortDescription": "Emils Cheese Pizza",
-      "price": "12.25"
-    },
-    {
-      "shortDescription": "Knorr Creamy Chicken",
-      "price": "1.26"
-    },
-    {
-      "shortDescription": "Doritos Nacho Cheese",
-      "price": "3.35"
-    },
-    {
-      "shortDescription": "Klarbrunn 12-PK 12 FL OZ",
-      "price": "12.00"
-    }
-  ],
-  "total": "35.35"
-}
-
-## Example Response:
-
-{
-  "id": "7fb1377b-b223-49d9-a31a-5a02701dd310"
-}
-# 2. Retrieve Points
-### Endpoint: /receipts/<receipt_id>/points
-### Method: GET
-### Response: JSON object with the points for the receipt
-### Example Response:
-
-{
-  "points": 32
-}
 ## Points Calculation Rules
 
 - **Retailer Name**: 1 point for each alphanumeric character.
