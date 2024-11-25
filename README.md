@@ -25,6 +25,46 @@ Run the Application
 
 python app.py
 Access the API locally at http://127.0.0.1:5000.
+# API Endpoints
+
+## 1. Process Receipts
+- **Endpoint**: `/receipts/process`
+- **Method**: POST
+- **Payload**: JSON object containing receipt data
+- **Response**: JSON object with a unique ID for the receipt
+
+### Example Request:
+
+```json
+{
+  "retailer": "Target",
+  "purchaseDate": "2022-01-01",
+  "purchaseTime": "13:01",
+  "items": [
+    {
+      "shortDescription": "Mountain Dew 12PK",
+      "price": "6.49"
+    },
+    {
+      "shortDescription": "Emils Cheese Pizza",
+      "price": "12.25"
+    },
+    {
+      "shortDescription": "Knorr Creamy Chicken",
+      "price": "1.26"
+    },
+    {
+      "shortDescription": "Doritos Nacho Cheese",
+      "price": "3.35"
+    },
+    {
+      "shortDescription": "Klarbrunn 12-PK 12 FL OZ",
+      "price": "12.00"
+    }
+  ],
+  "total": "35.35"
+}
+
 
 
 ## Points Calculation Rules
