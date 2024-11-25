@@ -8,39 +8,33 @@ This project implements a web service that processes receipts, calculates points
 1. **Process Receipts**: Accepts receipt data in JSON format and returns a unique ID for the receipt.
 2. **Retrieve Points**: Provides the points calculated for a specific receipt using its unique ID.
 
-## Installation and Setup
-
-### Prerequisites
-- Python 3.8 or above
-- `pip` (Python package installer)
-# Fetch-Backend-exercise1
-# Receipt Processor
-
-This project implements a web service that processes receipts, calculates points based on specific rules, and provides an API to retrieve the points for a receipt. The service is built using Python and Flask and stores all data in memory.
-
-## Features
-
-1. **Process Receipts**: Accepts receipt data in JSON format and returns a unique ID for the receipt.
-2. **Retrieve Points**: Provides the points calculated for a specific receipt using its unique ID.
-
-## Installation and Setup
-
-### Prerequisites
+## Prerequisites
 - Python 3.8 or above
 - `pip` (Python package installer)
 
+## Installation and Setup
 
-## Run the application:
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd <repository_directory>
+ ## Install dependencies:
+pip install -r requirements.txt
+Run the Application
+
+## Run the following command:
 
 python app.py
 Access the API locally at http://127.0.0.1:5000.
-API Endpoints
-Process Receipts
-Endpoint: /receipts/process
+
+## API Endpoints
+
+## 1. Process Receipts
+## Endpoint: /receipts/process
 ## Method: POST
-Payload: JSON object containing receipt data
-Response: JSON object with a unique ID for the receipt
-## Example Request
+## Payload: JSON object containing receipt data
+## Response: JSON object with a unique ID for the receipt
+## Example Request:
 
 {
   "retailer": "Target",
@@ -50,33 +44,36 @@ Response: JSON object with a unique ID for the receipt
     {
       "shortDescription": "Mountain Dew 12PK",
       "price": "6.49"
-    },{
+    },
+    {
       "shortDescription": "Emils Cheese Pizza",
       "price": "12.25"
-    },{
+    },
+    {
       "shortDescription": "Knorr Creamy Chicken",
       "price": "1.26"
-    },{
+    },
+    {
       "shortDescription": "Doritos Nacho Cheese",
       "price": "3.35"
-    },{
+    },
+    {
       "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
       "price": "12.00"
     }
   ],
   "total": "35.35"
 }
-
- ## Example Response
+## Example Response:
 
 {
   "id": "7fb1377b-b223-49d9-a31a-5a02701dd310"
 }
-
+## 2. Retrieve Points
 ## Endpoint: /receipts/<receipt_id>/points
-Method: GET
-Response: JSON object with the points for the receipt
-Example Response
+## Method: GET
+## Response: JSON object with the points for the receipt
+## Example Response:
 
 {
   "points": 32
@@ -90,10 +87,9 @@ Item Pairs: 5 points for every 2 items on the receipt.
 Item Description Length: If the trimmed length of an item description is a multiple of 3, multiply the item price by 0.2, round up, and add the result to the points.
 Odd Purchase Day: 6 points if the purchase date is an odd day.
 Afternoon Purchase Time: 10 points if the time of purchase is between 2:00 PM and 4:00 PM.
-
-
 ## Example 1
-Input
+
+## Input:
 
 {
   "retailer": "Target",
@@ -111,13 +107,12 @@ Input
   ],
   "total": "18.74"
 }
-Output
+## Output:
 
 {
   "id": "12345678-1234-5678-1234-567812345678"
 }
-Points:
+## Points Calculation:
 Retailer Name: 6 points
 Item Pairs: 5 points
 Total: 11 points
-
